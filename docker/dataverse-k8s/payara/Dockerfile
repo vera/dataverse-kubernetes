@@ -4,11 +4,13 @@
 # You may obtain a copy of the License at
 # http://www.apache.org/licenses/LICENSE-2.0
 
-FROM payara/server-full:5.2020.7-jdk11
+FROM payara/server-full:5.2021.1-jdk11
 LABEL maintainer="FDM FZJ <forschungsdaten@fz-juelich.de>, DANS <vyacheslav.tykhonov@dans.knaw.nl>"
 
-ARG VERSION=5.6
+ARG VERSION=5.9
 ARG DOMAIN=domain1
+
+ENV DEBIAN_FRONTEND=noninteractive
 
 ENV DATA_DIR=/data\
     DOCROOT_DIR=/opt/docroot\
@@ -30,7 +32,13 @@ RUN mkdir -p ${HOME_DIR} ${SCRIPT_DIR} ${SECRETS_DIR} && \
 
 # Install prerequisites
 RUN apt-get -qq update && \
-    apt-get -qqy install postgresql-client jq imagemagick curl wget unzip
+    apt-get -qqy install postgresql-client jq imagemagick curl wget unzip vim awscli python3-psycopg2 ed bc original-awk
+
+# Install Azure CLI
+RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
+RUN AZ_REPO=$(lsb_release -cs) && echo "deb [arch=amd64] https://packages.microsoft.com/repos/azure-cli/ $AZ_REPO main" | tee /etc/apt/sources.list.d/azure-cli.list
+RUN apt-get -qq update && apt-get -qqy install azure-cli
+
 
 # Install esh template engine from Github
 RUN wget --no-verbose -O esh https://raw.githubusercontent.com/jirutka/esh/v0.3.0/esh && \
@@ -62,3 +70,4 @@ RUN cd ${HOME_DIR} && \
 # Copy across docker scripts
 COPY --chown=payara:payara docker/dataverse-k8s/bin/* docker/dataverse-k8s/payara/bin/*.sh ${SCRIPT_DIR}/
 RUN chmod +x ${SCRIPT_DIR}/*
+WORKDIR ${HOME_DIR}/dvinstall
