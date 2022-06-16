@@ -7,7 +7,7 @@
 FROM payara/server-full:5.2021.1-jdk11
 LABEL maintainer="FDM FZJ <forschungsdaten@fz-juelich.de>, DANS <vyacheslav.tykhonov@dans.knaw.nl>"
 
-ARG VERSION=5.9
+ARG VERSION=5.11
 ARG DOMAIN=domain1
 
 ENV DEBIAN_FRONTEND=noninteractive
