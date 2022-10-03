@@ -7,7 +7,7 @@
 FROM payara/server-full:5.2021.1-jdk11
 LABEL maintainer="FDM FZJ <forschungsdaten@fz-juelich.de>, DANS <vyacheslav.tykhonov@dans.knaw.nl>"
 
-ARG VERSION=5.11
+ARG VERSION=5.11.1
 ARG DOMAIN=domain1
 
 ENV DEBIAN_FRONTEND=noninteractive
@@ -32,7 +32,7 @@ RUN mkdir -p ${HOME_DIR} ${SCRIPT_DIR} ${SECRETS_DIR} && \
 
 # Install prerequisites
 RUN apt-get -qq update && \
-    apt-get -qqy install postgresql-client jq imagemagick curl wget unzip vim awscli python3-psycopg2 ed bc original-awk
+    apt-get -qqy install postgresql-client jq imagemagick curl wget unzip vim awscli python3-psycopg2 ed bc original-awk python3-pandas lsb-release patch cron
 
 # Install Azure CLI
 RUN curl -sL https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor | tee /etc/apt/trusted.gpg.d/microsoft.gpg > /dev/null
