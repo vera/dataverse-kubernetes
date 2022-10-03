@@ -74,7 +74,7 @@ fi
 
 # Run scripts from init.d folder to finish configuration
 if [ "${INIT_SCRIPTS_FOLDER}" ]; then
-    for initscript in $INIT_SCRIPTS_FOLDER/*
+    for initscript in $INIT_SCRIPTS_FOLDER/0*
         do
            bash "$initscript"
         done
@@ -82,5 +82,25 @@ fi
 
 # OPTIONAL USERS AND DATAVERSES
 #./setup-optional.sh
+#${PAYARA_DIR}/bin/asadmin --user=${ADMIN_USER} --passwordfile=${PASSWORD_FILE} undeploy dataverse
+#${PAYARA_DIR}/bin/asadmin --user=${ADMIN_USER} --passwordfile=${PASSWORD_FILE} deploy /opt/payara/dvinstall/dataverse.war
+
+# Apply customization to Bundle.properties and reload application without restart
+chown -R payara:payara ${PAYARA_DIR}/glassfish/domains/${DOMAIN_NAME}/applications/dataverse/WEB-INF/classes/propertyFiles/Bundle.properties
+if [ "${INIT_SCRIPTS_FOLDER}" ]; then
+    for initscript in $INIT_SCRIPTS_FOLDER/2*
+        do
+           bash "$initscript"
+        done
+fi
+touch ${PAYARA_DIR}/glassfish/domains/${DOMAIN_NAME}/applications/dataverse/.reload
+sleep 15
+
+if [ "${INIT_SCRIPTS_FOLDER}" ]; then
+    for initscript in $INIT_SCRIPTS_FOLDER/1*
+        do
+           bash "$initscript"
+        done
+fi
 echo
 echo "Setup done. Enjoy Dataversing...." >> /tmp/status.log
