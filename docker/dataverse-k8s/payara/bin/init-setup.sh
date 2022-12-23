@@ -19,8 +19,8 @@ DV_SU_PASSWORD="admin"
 
 command -v jq >/dev/null 2>&1 || { echo >&2 '`jq` ("sed for JSON") is required, but not installed. Download the binary for your platform from http://stedolan.github.io/jq/ and make sure it is in your $PATH (/usr/bin/jq is fine) and executable with `sudo chmod +x /usr/bin/jq`. On Mac, you can install it with `brew install jq` if you use homebrew: http://brew.sh . Aborting.'; exit 1; }
 
-#SERVER=http://localhost:8080/api
-SERVER=${DATAVERSE_URL}/api
+SERVER=http://localhost:8080/api
+#SERVER=${DATAVERSE_URL}/api
 
 # Everything + the kitchen sink, in a single script
 # - Setup the metadata blocks and controlled vocabulary
@@ -71,6 +71,21 @@ else
 	curl -s -X POST -H "Content-type:application/json" -d "[\"authorName\",\"subject\",\"keywordValue\",\"dateOfDeposit\"]" $SERVER/dataverses/:root/facets/?key=$adminKey
 	echo
 fi
+
+# Block access to the API endpoints, but allow for request with key from secret
+API_KEY=`cat ${SECRETS_DIR}/api/key`
+curl -sS -X PUT -d "`cat ${SECRETS_DIR}/api/key`" "${SERVER}/admin/settings/:BlockedApiKey?unblock-key=${API_KEY}" >> /tmp/status.log 2>&1
+curl -sS -X PUT -d unblock-key "${SERVER}/admin/settings/:BlockedApiPolicy?unblock-key=${API_KEY}" >> /tmp/status.log 2>&1
+
+# The Solr Service IP is always available under its name within the same namespace.
+# If people want to use a different Solr than we normally deploy, they have the
+# option to override.
+SOLR_SERVICE_HOST=${SOLR_SERVICE_HOST:-"solr"}
+SOLR_SERVICE_PORT=${SOLR_SERVICE_PORT:-"8983"}
+
+# Configure Solr location
+echo "Setting Solr location to ${SOLR_SERVICE_HOST}:${SOLR_SERVICE_PORT}" >> /tmp/status.log
+curl -sS -X PUT -d "${SOLR_SERVICE_HOST}:${SOLR_SERVICE_PORT}" "${SERVER}/admin/settings/:SolrHostColonPort?unblock-key=${API_KEY}" >> /tmp/status.log 2>&1
 
 # Run scripts from init.d folder to finish configuration
 if [ "${INIT_SCRIPTS_FOLDER}" ]; then

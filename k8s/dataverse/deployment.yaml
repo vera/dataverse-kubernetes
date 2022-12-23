@@ -63,6 +63,9 @@ spec:
             - name: doi-secret
               mountPath: "/secrets/doi"
               readOnly: true
+            - name: api-secret
+              mountPath: "/secrets/api"
+              readOnly: true
             # This is here because of IQSS/dataverse-kubernetes#177. TBR for #178
             - name: primefaces-upload
               mountPath: /opt/dataverse/appserver/glassfish/domains/domain1/generated/jsp/dataverse
@@ -70,6 +73,7 @@ spec:
             httpGet:
               path: /robots.txt
               port: 8080
+            initialDelaySeconds: 120
       initContainers:
         - name: volume-mount-hack
           image: giantswarm/tiny-tools
@@ -100,6 +104,9 @@ spec:
         - name: doi-secret
           secret:
             secretName: dataverse-doi
+        - name: api-secret
+          secret:
+            secretName: dataverse-api
         - name: heapdumps
           emptyDir: {}
         # This is here because of IQSS/dataverse-kubernetes#177. TBR for #178
