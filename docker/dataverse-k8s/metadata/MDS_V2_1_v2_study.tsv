@@ -1,0 +1,626 @@
+#metadataBlock	name	dataverseAlias	displayName	blockURI
+	MDS_V2_1_v2_study		MDS_V2_1_v2_study	
+#datasetField	name	title	description	watermark	fieldType	displayOrder	displayFormat	advancedSearchField	allowControlledVocabulary	allowmultiples	facetable	displayoncreate	required	parent	metadatablock_id	termURI
+	study_primary_design	Is it an inteventional or non-interventional study?	Non-interventional study design refers to a study that does not aim to alter study outcomes of interest. Interventional study design refers to a study that aims to alter study outcomes of interest. Select between non-interventional and interventional study design.		text	0		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE		MDS_V2_1_v2_study	
+	study_type	Specification of study type	Group of items providing information about the study type.		none	1		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		MDS_V2_1_v2_study	
+	study_type_interventional	Specification of study type	The strategy for assigning interventions to participants. Select all that apply. If "Other" is selected, you can specify the study type in the field "Additional information about the study".		text	2		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_type	MDS_V2_1_v2_study	
+	study_type_non_interventional	Specification of study type	The primary strategy for participant identification and follow-up. Select all that apply. If "Other" is selected, you can specify the study type in the field "Additional information about the study".		text	3		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_type	MDS_V2_1_v2_study	
+	study_conditions	Primary health condition(s), disease(s) or focus of the study	Group of items providing information about primary health condition(s) or disease(s) considered in the study, or the focus of the study (e.g. medication, food, therapy, device, etc.)		none	4		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_conditions_label	Name of the primary health condition, disease or focus of the study	Name of primary health condition or disease considered in the study, or the focus of the study (e.g. medication, food, therapy, device, etc.) Preferably, use terms from SNOMED CT (https://browser.ihtsdotools.org).	SARS-CoV-2	text	5		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	study_conditions	MDS_V2_1_v2_study	
+	study_conditions_classification	Terminology/classification	Terminology/classification used for the health condition, diesease or focus. If used, name of the terminology/classification.	SNOMED CT	text	6		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	study_conditions	MDS_V2_1_v2_study	
+	study_conditions_classification_code	Code ---- If known, code of the health condition, disease or focus in the terminology/classification used	Code of the health condition, disease, focus in the terminology/classification used. If found, the code from the terminology/classification used.	http://snomed.info/id/840533007	text	7		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_conditions	MDS_V2_1_v2_study	
+	study_groups_of_diseases	Which groups of diseases or conditions were the data collected on?	Group of items providing information about groups of diseases or conditions on which the data were collected in the study.		none	8		FALSE	FALSE	FALSE	FALSE	TRUE	TRUE		MDS_V2_1_v2_study	
+	study_groups_of_diseases_generally	Which groups of diseases or conditions were the data collected on?	'Groups of diseases or conditions on which the data were collected in the study. Select all that apply. For more information about the groups of diseases/conditions, visit the WHO''s ICD-11 homepage: https://icd.who.int/en.'		text	9		TRUE	TRUE	TRUE	TRUE	TRUE	TRUE	study_groups_of_diseases	MDS_V2_1_v2_study	
+	study_groups_of_diseases_prevalent_outcomes	Can the data on prevalent health outcomes be inferred for the studied groups of diseases/conditions?	Groups of diseases or conditions for which the data on prevalent health outcomes can be inferred.		text	10		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_groups_of_diseases	MDS_V2_1_v2_study	
+	study_groups_of_diseases_incident_outcomes	Can the data on incident health outcomes be inferred for the studied groups of diseases/conditions?	Groups of diseases or conditions for which the data on incident health outcomes can be inferred.		text	11		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_groups_of_diseases	MDS_V2_1_v2_study	
+	study_ethics_committee_approval	Status of the ethics committee approval	Status of the study approval from the (leading) ethics committee		text	12		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_status	Overall study status	Overall status of the study. Select one value from the list.		text	13		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE		MDS_V2_1_v2_study	
+	study_status_when_intervention	Do participants receive an intervention?	Specification whether study participants receive intervention or have completed it but are still being followed according to the primary objective of the study. Select one value from the list.		text	14		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_status_halted_stage	At what stage was the study stopped?	If the study was stopped prematurely, specification of the stage at what it was halted. Select one value from the list.		text	15		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_status_halted_reason	Reason why the study was stopped	If the study was stopped prematurely, specification of the reason(s) why it was halted. E.g., accrual goal met / closed due to toxicity / closed due to lack of study progress / temporarily-closed per study design /etc.		text	16		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_status_enrolling_by_invitation	Are participants enrolled by invitation?	Specification whether study participants have been selected from a predetermined population or enrolled by invitation.		text	17		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_recruitment_status_register	Overall recruitment status of the study from the register of clinical trials	Overall recruitment status of the study as indicated in the corresponding register of clinical trials.		text	18		TRUE	TRUE	FALSE	TRUE	FALSE	FALSE		MDS_V2_1_v2_study	
+	study_start_date	Start date of data collection for the study	Start date of data collection for the study. In case of a planned study, it is the intended start date; in case of an ongoing study — the actual start date.		date	19		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_end_date	End date of data collection for the study	In case of studies with patients or other participants, it is the date when the last participant is examined or receives an intervention, or the date of the last participant’s last visit. In case of a planned or ongoing study, it is the intended end date; in case of a completed study — the actual end date.		date	20		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_countries	Country(ies) where the study takes place	Country or countries where the study takes place. Select all that apply.		text	21		TRUE	TRUE	TRUE	TRUE	TRUE	TRUE		MDS_V2_1_v2_study	
+	study_region	Regions and/or cities within a country where the study takes place	If applicable, region(s) and/or city(ies) within a country where the study takes place.		text	22		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_centers	Is it a mono- or multicentric study?	Specification whether a study is conducted at one study center or at more than one study center.		text	23		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_centers_number	Number of study centers	Number of centers involved in the study.		int	24		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_subject	Primary study subject	Primary study subject, i.e. a person, an animal or some other type of the subject. Select one value from the list.		text	25		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE		MDS_V2_1_v2_study	
+	study_sampling	Sampling method	Group of items providing information about the applied sampling method. Select one value from the list.		none	26		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE		MDS_V2_1_v2_study	
+	study_sampling_method	Applied sampling method	Type of the sampling method applied for the selection of study participants. Select one value from the list.		text	27		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	study_sampling	MDS_V2_1_v2_study	
+	study_sampling_method_probability	Specific type of probability sampling	Specific type of the probability sampling method applied for the selection of study participants. If known, select one value from the list.		text	28		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_sampling	MDS_V2_1_v2_study	
+	study_sampling_method_non_probability	Specific type of non-probability sampling	Specific type of the probability sampling method applied for the selection of study participants. If known, select one value from the list.		text	29		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_sampling	MDS_V2_1_v2_study	
+	study_data_source	Data sources from which study data are generated or extracted.	Group of items providing information about data sources from which study data are generated or extracted.		none	30		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE		MDS_V2_1_v2_study	
+	study_data_sources_general	Data sources for the study (e.g. biosamples, registries, questionnaires, etc.)	Different types of data sources from which study data are generated or extracted. Select all that apply.		text	31		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_data_source	MDS_V2_1_v2_study	
+	study_data_sources_biosamples	Biosamples collected in the study	Specification of biosamples collected in the study.		text	32		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_data_source	MDS_V2_1_v2_study	
+	study_data_sources_imaging	Imaging data collected in the study	Specification of imaging data collected in the study.		text	33		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_data_source	MDS_V2_1_v2_study	
+	study_data_sources_omics	Omics technology used in the study	Specification of omics technology applied in the study.		text	34		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_data_source	MDS_V2_1_v2_study	
+	study_data_source_description	Additional information about data sources	If needed, additional descriptive information about study data sources, e.g. indication of the data source(s) not listed in the property „Data sources for the study” or more detailed description of the selected data sources. E.g., indication of the data source(s) not listed in the field „Data sources for the study” or more detailed description of the selected data sources.		text	35		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_data_source	MDS_V2_1_v2_study	
+	study_primary_purpose	Primary purpose of the study	Specification of the main purpose of the study. Foremost for interventional studies, please specify the primary purpose why the study was conducted. For non-interventional studies, this field may be "Not appplicable" as multiple purposes may be defined as primary ones.		text	36		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_eligibility_criteria	Eligibility criteria for study participants	Group of items providing information about eligibility criteria for study participants.		none	37		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_eligibility_age_min	Eligibility criteria: Minimum age	Group of items providing information about the minimum eligible age of study participants.		none	38		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	study_eligibility_criteria	MDS_V2_1_v2_study	
+	number	Minimum eligible age	Numerical value of the minimum age of potential participants eligible to participate in the study.		int	39		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	study_eligibility_age_min	MDS_V2_1_v2_study	
+	time_unit	Unit of time	Unit of time.		text	40		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	study_eligibility_age_min	MDS_V2_1_v2_study	
+	study_eligibility_age_max	Eligibility criteria: Maximum age	Group of items providing information about the maximum eligible age of study participants.		none	41		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	study_eligibility_criteria	MDS_V2_1_v2_study	
+	study_eligibility_age_max_number	Maximum eligible age	Numerical value of the maximum age of potential participants eligible to participate in the study.		int	42		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	study_eligibility_age_max	MDS_V2_1_v2_study	
+	study_eligibility_age_max_time_unit	Unit of time	Unit of time.		text	43		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	study_eligibility_age_max	MDS_V2_1_v2_study	
+	study_eligibility_genders	Eligible gender	Gender of potential participants eligible to participate in the study. Select all that apply.		text	44		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_eligibility_criteria	MDS_V2_1_v2_study	
+	study_eligibility_inclusion_criteria	Inclusion criteria	Inclusion criteria for participation in the study. If possible, use an enumerated or bulleted list for each criterion.		text	45		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_eligibility_criteria	MDS_V2_1_v2_study	
+	study_eligibility_exclusion_criteria	Exclusion criteria	Exclusion criteria for participation in the study. If possible, use an enumerated or bulleted list for each criterion.		text	46		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_eligibility_criteria	MDS_V2_1_v2_study	
+	study_population	Description of study population	Additional descriptive information providing more details about study population. Any information important for the given study population can be specified here.		text	47		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_target_sample_size	Target sample size	Intended number of observational units for the whole study (e.g. intended number of study participants at all study sites). Enter “-1” if target sample size was not set or is unknown.		int	48		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_obtained_sample_size	Obtained sample size	Obtained number of observational units for the whole study (e.g. obtained number of study participants at all study sites). The value is only available after the end of recruitment. Enter “-1” if obtained sample size is unknown.		int	49		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_age_min_examined	Actual minimum age of participants	Group of items providing information about the actual minimum age of study participants at the time of examination.		none	50		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE		MDS_V2_1_v2_study	
+	study_age_min_examined_number	Actual minimum age of participants	Numerical value of the minimum age of study participants at the time of examination.		int	51		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	study_age_min_examined	MDS_V2_1_v2_study	
+	study_age_min_examined_time_unit	Unit of time	Unit of time.		text	52		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	study_age_min_examined	MDS_V2_1_v2_study	
+	study_age_max_examined	Actual minimum age of participants	Group of items providing information about the actual maximum age of study participants at the time of examination.		none	53		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE		MDS_V2_1_v2_study	
+	study_age_max_examined_number	Actual minimum age of participants	Numerical value of the maximum age of study participants at the time of examination.		int	54		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	study_age_max_examined	MDS_V2_1_v2_study	
+	study_age_max_examined_time_unit	Unit of time	Unit of time.		text	55		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	study_age_max_examined	MDS_V2_1_v2_study	
+	study_hypothesis	Research questions and/or hypothesis underlying the study	Statement of the research questions and/or hypotheses underlying the study.		text	56		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_arms_groups	Arms or groups/cohorts of the study	Group of items providing information about arms or groups/cohorts of the study		none	57		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_arm_group_label	Name of the arm/group	Short name used to identify the arm/group.		text	58		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	study_arms_groups	MDS_V2_1_v2_study	
+	study_arm_group_type	Role of the arm	Role of the given arm in the study. Select one value from the list.		text	59		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_arms_groups	MDS_V2_1_v2_study	
+	study_arm_group_description	Additional information about the arm/group	Additional descriptive information about the given arm/group.		text	60		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_arms_groups	MDS_V2_1_v2_study	
+	study_interventions	Interventions/exposures of the study	Group of items providing information about study interventions or exposures.		none	61		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_intervention_name	Name of the intervention/exposure	A short descriptive name of the intervention/exposure. If the same intervention/exposure is associated with more than one arm or group, provide the information once and use the field "Name of the associated study arm/group" to associate it with more than one arm/group.		text	62		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	study_interventions	MDS_V2_1_v2_study	
+	study_intervention_type	Type of the intervention/exposure	General type of the given intervention/exposure.		text	63		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_interventions	MDS_V2_1_v2_study	
+	study_intervention_description	Additional information about the intervention/exposure	If needed, additional descriptive information about the given intervention/exposure.		text	64		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_interventions	MDS_V2_1_v2_study	
+	study_intervention_arms_groups_label	Name of the arm/group associated with the given intervention	Name of the study arm associated with the given intervention		text	65		TRUE	FALSE	TRUE	FALSE	TRUE	FALSE	study_interventions	MDS_V2_1_v2_study	
+	study_outcomes	Outcome measure(s)	Group of items providing information about outcome measure(s)		none	66		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_outcome_type	Type of the outcome measure	Type of the outcome measure. Primary or secondary outcome measure?		text	67		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_outcomes	MDS_V2_1_v2_study	
+	study_outcome_title	Name of the outcome measure	Name of the outcome measure. For non-interventional studies, this can be the name of specific measurement(s) or observation(s) used to describe patterns of diseases or traits or associations with exposures, risk factors or treatment. For non-interventional studies, this can be specific measurement(s) or observation(s) used to describe patterns of diseases or traits or associations with exposures, risk factors or treatment.		text	68		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_outcomes	MDS_V2_1_v2_study	
+	study_outcome_description	Description of the outcome measure	Additional descriptive information about the given outcome		text	69		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_outcomes	MDS_V2_1_v2_study	
+	study_outcome_time_frame	Time point(s) of assessment	Description of the time point(s) at which the measurement for the outcome is assessed, e.g. the specific duration of time over which each participant is assessed.		text	70		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_outcomes	MDS_V2_1_v2_study	
+	study_design_comment	Any additional information about the study	Any additional information about specific aspects of the study that cannot be captured by other properties. Any additional information about specific aspects of the study that cannot be captured by other properties.		text	71		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_data_sharing_plan	Information about data sharing	Group of items providing information about the data sharing strategy of the study		none	72		FALSE	FALSE	FALSE	FALSE	TRUE	TRUE		MDS_V2_1_v2_study	
+	study_data_sharing_plan_generally	Is it planned to share the data?	Indication whether there is a plan to make data collected in the study available. In case of studies with patients or other individuals, this refers to individual participant data (IPD). Select one value from the list.		text	73		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	study_data_sharing_plan	MDS_V2_1_v2_study	
+	study_data_sharing_plan_description	Additional information about data sharing	Additional descriptive information providing more details about the data sharing, e.g. indication what data in particular will be shared or why the data will not be shared or why it is not yet decided. E.g., indication what data in particular will be shared or why the data will not be shared or why it is not yet decided		text	74		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_data_sharing_plan	MDS_V2_1_v2_study	
+	study_data_sharing_plan_supporting_information	Supporting documents available in addition to the data	Supporting information/documents which will be made available in addition to the study data. Select all that apply.		text	75		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_data_sharing_plan	MDS_V2_1_v2_study	
+	study_data_sharing_plan_time_frame	When and for how long will the data be available?	Indication when the data and, if applicable, supporting documents will become available and for how long.		text	76		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_data_sharing_plan	MDS_V2_1_v2_study	
+	study_data_sharing_plan_access_criteria	Criteria for the data access	Indication by what access criteria data will be shared, including: a) with whom, b) for what types of analyses, and c) by what mechanism. E.g., with whom, for what types of analyses and by what mechanism the data will be shared.		text	77		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_data_sharing_plan	MDS_V2_1_v2_study	
+	study_data_sharing_plan_datashield	Is the DataSHIELD/Opal infrastructure available?	Indication, whether the DataSHIELD/Opal infrastructure is available.		text	78		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_data_sharing_plan	MDS_V2_1_v2_study	
+	study_data_sharing_plan_url	Web page with additional information about data sharing	If existing, a link to the web page where additional information about data sharing can be found.		text	79		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_data_sharing_plan	MDS_V2_1_v2_study	
+	study_design_non_interventional	Information about specific aspects of non-interventional studies/substudies	Group of items providing information about specific aspects of interventional studies or substudies.		none	80		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_time_perspectives	Temporal design of the study	Temporal design of the study, i.e. the relationship of observation period to time of participant enrollment. Is it a retrospective, prospective or cross-sectional study?		text	81		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_design_non_interventional	MDS_V2_1_v2_study	
+	study_target_followup_duration	Target follow-up duration	If applicable, anticipated time period over which each participant is to be followed, provided in years. The value must be provided in years.		float	82		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_design_non_interventional	MDS_V2_1_v2_study	
+	study_biospecimen_retention	Which biosamples are retained in a biorepository?	Indication whether samples of biomaterial from study participants are retained in a biorepository. Select all that apply.		text	83		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_design_non_interventional	MDS_V2_1_v2_study	
+	study_biospecimen_description	Specific types of retained biosamples	Additional information about biosamples to be retained, i.e. which specific types of biospecimens will be retained (e.g. blood, serum, urine, etc.) Which specific types of biosamples will be retained (e.g. blood, serum, urine, etc.)?		text	84		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_design_non_interventional	MDS_V2_1_v2_study	
+	study_design_interventional	Information about specific aspects of interventional studies/substudies	Group of items providing information about specific aspects of interventional studies or substudies.		none	85		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_study	
+	study_phase	Numerical phase of the study	If applicable, numerical phase of the study. Select one value from the list.		text	86		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_design_interventional	MDS_V2_1_v2_study	
+	study_masking	Information about masking of intervention(s) assignment	Group of items providing information about the masking of intervention(s) assignment		none	87		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	study_design_interventional	MDS_V2_1_v2_study	
+	study_masking_general	Is masking of intervention(s) assignment implemented?	Indication, whether a masking (or blinding) of intervention(s) assignment is implemented (i.e., whether someone is prevented from having knowledge of the interventions assigned to individual participants).		text	88		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_masking	MDS_V2_1_v2_study	
+	study_masking_roles	Who is masked?	If masking is implemented, the party(ies) who are masked. Select all that apply.		text	89		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE	study_masking	MDS_V2_1_v2_study	
+	study_masking_description	Additional information about masking	If needed, additional descriptive information about masking (e.g. information about other parties who may be masked). If needed, additional information about masking, e.g. other parties who may be masked.		text	90		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	study_masking	MDS_V2_1_v2_study	
+	study_allocation	Type of allocation of participants to an arm	Type of allocation/assignment of individual study participants to an arm. Select one value from the list.		text	91		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_design_interventional	MDS_V2_1_v2_study	
+	study_off_label_use	Off-label use of a drug product	Unapproved (off-label) use of a drug product. Select "Yes" or "No" only for drug studies and "Not applicable” for all other studies.		text	92		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	study_design_interventional	MDS_V2_1_v2_study	
+#controlledVocabulary	DatasetField	Value	identifier	displayOrder
+	study_primary_design	Interventional	SPD_0	0
+	study_primary_design	Non-interventional	SPD_1	1
+	study_type_interventional	Crossover	STI_0	0
+	study_type_interventional	Factorial	STI_1	1
+	study_type_interventional	Other	STI_2	2
+	study_type_interventional	Parallel	STI_3	3
+	study_type_interventional	Sequential	STI_4	4
+	study_type_interventional	Single group	STI_5	5
+	study_type_interventional	Unknown	STI_6	6
+	study_type_non_interventional	Birth cohort	STNI_0	0
+	study_type_non_interventional	Case-cohort	STNI_1	1
+	study_type_non_interventional	Case-control	STNI_2	2
+	study_type_non_interventional	Case-crossover	STNI_3	3
+	study_type_non_interventional	Case-only	STNI_4	4
+	study_type_non_interventional	Cohort	STNI_5	5
+	study_type_non_interventional	Cross-section	STNI_6	6
+	study_type_non_interventional	Cross-section ad-hoc follow-up	STNI_7	7
+	study_type_non_interventional	Ecologic or community studies	STNI_8	8
+	study_type_non_interventional	Family-based	STNI_9	9
+	study_type_non_interventional	Longitudinal	STNI_10	10
+	study_type_non_interventional	Nested case-control	STNI_11	11
+	study_type_non_interventional	Other	STNI_12	12
+	study_type_non_interventional	Panel	STNI_13	13
+	study_type_non_interventional	Quality control	STNI_14	14
+	study_type_non_interventional	Registry	STNI_15	15
+	study_type_non_interventional	Time series	STNI_16	16
+	study_type_non_interventional	Trend	STNI_17	17
+	study_type_non_interventional	Twin study	STNI_18	18
+	study_type_non_interventional	Unknown	STNI_19	19
+	study_conditions_classification	Free text	SCC_0	0
+	study_conditions_classification	ICD-10	SCC_1	1
+	study_conditions_classification	MeSH	SCC_2	2
+	study_conditions_classification	MedDRA	SCC_3	3
+	study_conditions_classification	Other vocabulary	SCC_4	4
+	study_conditions_classification	SNOMED CT	SCC_5	5
+	study_groups_of_diseases_generally	Certain conditions originating in the perinatal period (19)	SGODG_0	0
+	study_groups_of_diseases_generally	Certain infectious or parasitic diseases (01)	SGODG_1	1
+	study_groups_of_diseases_generally	Conditions related to sexual health (17)	SGODG_2	2
+	study_groups_of_diseases_generally	Developmental anomalies (20)	SGODG_3	3
+	study_groups_of_diseases_generally	Diseases of the blood or blood-forming organs (03)	SGODG_4	4
+	study_groups_of_diseases_generally	Diseases of the circulatory system (11)	SGODG_5	5
+	study_groups_of_diseases_generally	Diseases of the digestive system (13)	SGODG_6	6
+	study_groups_of_diseases_generally	Diseases of the ear or mastoid process (10)	SGODG_7	7
+	study_groups_of_diseases_generally	Diseases of the genitourinary system (16)	SGODG_8	8
+	study_groups_of_diseases_generally	Diseases of the immune system (04)	SGODG_9	9
+	study_groups_of_diseases_generally	Diseases of the musculoskeletal system or connective tissue (15)	SGODG_10	10
+	study_groups_of_diseases_generally	Diseases of the nervous system (08)	SGODG_11	11
+	study_groups_of_diseases_generally	Diseases of the respiratory system (12)	SGODG_12	12
+	study_groups_of_diseases_generally	Diseases of the skin (14)	SGODG_13	13
+	study_groups_of_diseases_generally	Diseases of the visual system (09)	SGODG_14	14
+	study_groups_of_diseases_generally	Endocrine, nutritional or metabolic diseases (05)	SGODG_15	15
+	study_groups_of_diseases_generally	External causes of morbidity or mortality (23)	SGODG_16	16
+	study_groups_of_diseases_generally	Factors influencing health status or contact with health services (24)	SGODG_17	17
+	study_groups_of_diseases_generally	Injury, poisoning or certain other consequences of external causes (22)	SGODG_18	18
+	study_groups_of_diseases_generally	Mental, behavioural or neurodevelopmental disorders (06)	SGODG_19	19
+	study_groups_of_diseases_generally	Neoplasms (02)	SGODG_20	20
+	study_groups_of_diseases_generally	Not applicable	SGODG_21	21
+	study_groups_of_diseases_generally	Other	SGODG_22	22
+	study_groups_of_diseases_generally	Pregnancy, childbirth or the puerperium (18)	SGODG_23	23
+	study_groups_of_diseases_generally	Sleep-wake disorders (07)	SGODG_24	24
+	study_groups_of_diseases_generally	Symptoms, signs or clinical findings, not elsewhere classified (21)	SGODG_25	25
+	study_groups_of_diseases_generally	Unknown	SGODG_26	26
+	study_groups_of_diseases_prevalent_outcomes	No	SGODPO_0	0
+	study_groups_of_diseases_prevalent_outcomes	Yes	SGODPO_1	1
+	study_groups_of_diseases_incident_outcomes	No	SGODIO_0	0
+	study_groups_of_diseases_incident_outcomes	Yes	SGODIO_1	1
+	study_ethics_committee_approval	Approval not required	SECA_0	0
+	study_ethics_committee_approval	Request for approval not yet submitted	SECA_1	1
+	study_ethics_committee_approval	Request for approval submitted, approval denied	SECA_2	2
+	study_ethics_committee_approval	Request for approval submitted, approval granted	SECA_3	3
+	study_ethics_committee_approval	Request for approval submitted, approval pending	SECA_4	4
+	study_ethics_committee_approval	Request for approval submitted, exempt granted	SECA_5	5
+	study_ethics_committee_approval	Study withdrawn prior to decision on approval	SECA_6	6
+	study_ethics_committee_approval	Unknown status of request approval	SECA_7	7
+	study_status	At the planning stage	SS_0	0
+	study_status	Completed: Recruitment, data collection, and data quality management completed normally	SS_1	1
+	study_status	Ongoing (I): Recruitment ongoing, but data collection not yet started	SS_2	2
+	study_status	Ongoing (II): Recruitment and data collection ongoing	SS_3	3
+	study_status	Ongoing (III): Recruitment completed, but data collection ongoing	SS_4	4
+	study_status	Ongoing (IV): Recruitment and data collection completed, but data quality management ongoing	SS_5	5
+	study_status	Other	SS_6	6
+	study_status	Suspended: Recruitment, data collection, or data quality management, halted, but potentially will resume	SS_7	7
+	study_status	Terminated: Recruitment, data collection, data and quality management halted prematurely and will not resume	SS_8	8
+	study_status_when_intervention	Intervention completed, follow-up ongoing	SSWI_0	0
+	study_status_when_intervention	Intervention ongoing	SSWI_1	1
+	study_status_halted_stage	At the planning stage	SSHS_0	0
+	study_status_halted_stage	Ongoing (I): Recruitment ongoing, but data collection not yet started	SSHS_1	1
+	study_status_halted_stage	Ongoing (II): Recruitment and data collection ongoing	SSHS_2	2
+	study_status_halted_stage	Ongoing (III): Recruitment completed, but data collection ongoing	SSHS_3	3
+	study_status_halted_stage	Ongoing (IV): Recruitment and data collection completed, but data quality management ongoing	SSHS_4	4
+	study_status_enrolling_by_invitation	No	SSEBI_0	0
+	study_status_enrolling_by_invitation	Not applicable	SSEBI_1	1
+	study_status_enrolling_by_invitation	Yes	SSEBI_2	2
+	study_recruitment_status_register	Active, not recruiting	SRSR_0	0
+	study_recruitment_status_register	Completed	SRSR_1	1
+	study_recruitment_status_register	Enrolling by invitation	SRSR_2	2
+	study_recruitment_status_register	Not yet recruiting	SRSR_3	3
+	study_recruitment_status_register	Other	SRSR_4	4
+	study_recruitment_status_register	Recruiting	SRSR_5	5
+	study_recruitment_status_register	Suspended	SRSR_6	6
+	study_recruitment_status_register	Terminated	SRSR_7	7
+	study_recruitment_status_register	Withdrawn	SRSR_8	8
+	study_countries	Afghanistan	SC_0	0
+	study_countries	Aland Islands	SC_1	1
+	study_countries	Albania	SC_2	2
+	study_countries	Algeria	SC_3	3
+	study_countries	American Samoa	SC_4	4
+	study_countries	Andorra	SC_5	5
+	study_countries	Angola	SC_6	6
+	study_countries	Anguilla	SC_7	7
+	study_countries	Antarctica	SC_8	8
+	study_countries	Antigua And Barbuda	SC_9	9
+	study_countries	Argentina	SC_10	10
+	study_countries	Armenia	SC_11	11
+	study_countries	Aruba	SC_12	12
+	study_countries	Australia	SC_13	13
+	study_countries	Austria	SC_14	14
+	study_countries	Azerbaijan	SC_15	15
+	study_countries	Bahamas	SC_16	16
+	study_countries	Bahrain	SC_17	17
+	study_countries	Bangladesh	SC_18	18
+	study_countries	Barbados	SC_19	19
+	study_countries	Belarus	SC_20	20
+	study_countries	Belgium	SC_21	21
+	study_countries	Belize	SC_22	22
+	study_countries	Benin	SC_23	23
+	study_countries	Bermuda	SC_24	24
+	study_countries	Bhutan	SC_25	25
+	study_countries	Bolivia	SC_26	26
+	study_countries	Bosnia And Herzegovina	SC_27	27
+	study_countries	Botswana	SC_28	28
+	study_countries	Bouvet Island	SC_29	29
+	study_countries	Brazil	SC_30	30
+	study_countries	British Indian Ocean Territory	SC_31	31
+	study_countries	Brunei Darussalam	SC_32	32
+	study_countries	Bulgaria	SC_33	33
+	study_countries	Burkina Faso	SC_34	34
+	study_countries	Burundi	SC_35	35
+	study_countries	Cambodia	SC_36	36
+	study_countries	Cameroon	SC_37	37
+	study_countries	Canada	SC_38	38
+	study_countries	Cape Verde	SC_39	39
+	study_countries	Cayman Islands	SC_40	40
+	study_countries	Central African Republic	SC_41	41
+	study_countries	Chad	SC_42	42
+	study_countries	Chile	SC_43	43
+	study_countries	China	SC_44	44
+	study_countries	Christmas Island	SC_45	45
+	study_countries	Cocos (Keeling) Islands	SC_46	46
+	study_countries	Colombia	SC_47	47
+	study_countries	Comoros	SC_48	48
+	study_countries	Congo	SC_49	49
+	study_countries	Congo, Democratic Republic	SC_50	50
+	study_countries	Cook Islands	SC_51	51
+	study_countries	Costa Rica	SC_52	52
+	study_countries	'Cote D''Ivoire'	SC_53	53
+	study_countries	Croatia	SC_54	54
+	study_countries	Cuba	SC_55	55
+	study_countries	Cyprus	SC_56	56
+	study_countries	Czech Republic	SC_57	57
+	study_countries	Denmark	SC_58	58
+	study_countries	Djibouti	SC_59	59
+	study_countries	Dominica	SC_60	60
+	study_countries	Dominican Republic	SC_61	61
+	study_countries	Ecuador	SC_62	62
+	study_countries	Egypt	SC_63	63
+	study_countries	El Salvador	SC_64	64
+	study_countries	Equatorial Guinea	SC_65	65
+	study_countries	Eritrea	SC_66	66
+	study_countries	Estonia	SC_67	67
+	study_countries	Ethiopia	SC_68	68
+	study_countries	Falkland Islands (Malvinas)	SC_69	69
+	study_countries	Faroe Islands	SC_70	70
+	study_countries	Fiji	SC_71	71
+	study_countries	Finland	SC_72	72
+	study_countries	France	SC_73	73
+	study_countries	French Guiana	SC_74	74
+	study_countries	French Polynesia	SC_75	75
+	study_countries	French Southern Territories	SC_76	76
+	study_countries	Gabon	SC_77	77
+	study_countries	Gambia	SC_78	78
+	study_countries	Georgia	SC_79	79
+	study_countries	Germany	SC_80	80
+	study_countries	Ghana	SC_81	81
+	study_countries	Gibraltar	SC_82	82
+	study_countries	Greece	SC_83	83
+	study_countries	Greenland	SC_84	84
+	study_countries	Grenada	SC_85	85
+	study_countries	Guadeloupe	SC_86	86
+	study_countries	Guam	SC_87	87
+	study_countries	Guatemala	SC_88	88
+	study_countries	Guernsey	SC_89	89
+	study_countries	Guinea	SC_90	90
+	study_countries	Guinea-Bissau	SC_91	91
+	study_countries	Guyana	SC_92	92
+	study_countries	Haiti	SC_93	93
+	study_countries	Heard Island & Mcdonald Islands	SC_94	94
+	study_countries	Holy See (Vatican City State)	SC_95	95
+	study_countries	Honduras	SC_96	96
+	study_countries	Hong Kong	SC_97	97
+	study_countries	Hungary	SC_98	98
+	study_countries	Iceland	SC_99	99
+	study_countries	India	SC_100	100
+	study_countries	Indonesia	SC_101	101
+	study_countries	Iran, Islamic Republic Of	SC_102	102
+	study_countries	Iraq	SC_103	103
+	study_countries	Ireland	SC_104	104
+	study_countries	Isle Of Man	SC_105	105
+	study_countries	Israel	SC_106	106
+	study_countries	Italy	SC_107	107
+	study_countries	Jamaica	SC_108	108
+	study_countries	Japan	SC_109	109
+	study_countries	Jersey	SC_110	110
+	study_countries	Jordan	SC_111	111
+	study_countries	Kazakhstan	SC_112	112
+	study_countries	Kenya	SC_113	113
+	study_countries	Kiribati	SC_114	114
+	study_countries	Korea	SC_115	115
+	study_countries	Kuwait	SC_116	116
+	study_countries	Kyrgyzstan	SC_117	117
+	study_countries	'Lao People''s Democratic Republic'	SC_118	118
+	study_countries	Latvia	SC_119	119
+	study_countries	Lebanon	SC_120	120
+	study_countries	Lesotho	SC_121	121
+	study_countries	Liberia	SC_122	122
+	study_countries	Libyan Arab Jamahiriya	SC_123	123
+	study_countries	Liechtenstein	SC_124	124
+	study_countries	Lithuania	SC_125	125
+	study_countries	Luxembourg	SC_126	126
+	study_countries	Macao	SC_127	127
+	study_countries	Macedonia	SC_128	128
+	study_countries	Madagascar	SC_129	129
+	study_countries	Malawi	SC_130	130
+	study_countries	Malaysia	SC_131	131
+	study_countries	Maldives	SC_132	132
+	study_countries	Mali	SC_133	133
+	study_countries	Malta	SC_134	134
+	study_countries	Marshall Islands	SC_135	135
+	study_countries	Martinique	SC_136	136
+	study_countries	Mauritania	SC_137	137
+	study_countries	Mauritius	SC_138	138
+	study_countries	Mayotte	SC_139	139
+	study_countries	Mexico	SC_140	140
+	study_countries	Micronesia, Federated States Of	SC_141	141
+	study_countries	Moldova	SC_142	142
+	study_countries	Monaco	SC_143	143
+	study_countries	Mongolia	SC_144	144
+	study_countries	Montenegro	SC_145	145
+	study_countries	Montserrat	SC_146	146
+	study_countries	Morocco	SC_147	147
+	study_countries	Mozambique	SC_148	148
+	study_countries	Myanmar	SC_149	149
+	study_countries	Namibia	SC_150	150
+	study_countries	Nauru	SC_151	151
+	study_countries	Nepal	SC_152	152
+	study_countries	Netherlands	SC_153	153
+	study_countries	Netherlands Antilles	SC_154	154
+	study_countries	New Caledonia	SC_155	155
+	study_countries	New Zealand	SC_156	156
+	study_countries	Nicaragua	SC_157	157
+	study_countries	Niger	SC_158	158
+	study_countries	Nigeria	SC_159	159
+	study_countries	Niue	SC_160	160
+	study_countries	Norfolk Island	SC_161	161
+	study_countries	Northern Mariana Islands	SC_162	162
+	study_countries	Norway	SC_163	163
+	study_countries	Oman	SC_164	164
+	study_countries	Pakistan	SC_165	165
+	study_countries	Palau	SC_166	166
+	study_countries	Palestinian Territory, Occupied	SC_167	167
+	study_countries	Panama	SC_168	168
+	study_countries	Papua New Guinea	SC_169	169
+	study_countries	Paraguay	SC_170	170
+	study_countries	Peru	SC_171	171
+	study_countries	Philippines	SC_172	172
+	study_countries	Pitcairn	SC_173	173
+	study_countries	Poland	SC_174	174
+	study_countries	Portugal	SC_175	175
+	study_countries	Puerto Rico	SC_176	176
+	study_countries	Qatar	SC_177	177
+	study_countries	Reunion	SC_178	178
+	study_countries	Romania	SC_179	179
+	study_countries	Russian Federation	SC_180	180
+	study_countries	Rwanda	SC_181	181
+	study_countries	Saint Barthelemy	SC_182	182
+	study_countries	Saint Helena	SC_183	183
+	study_countries	Saint Kitts And Nevis	SC_184	184
+	study_countries	Saint Lucia	SC_185	185
+	study_countries	Saint Martin	SC_186	186
+	study_countries	Saint Pierre And Miquelon	SC_187	187
+	study_countries	Saint Vincent And Grenadines	SC_188	188
+	study_countries	Samoa	SC_189	189
+	study_countries	San Marino	SC_190	190
+	study_countries	Sao Tome And Principe	SC_191	191
+	study_countries	Saudi Arabia	SC_192	192
+	study_countries	Senegal	SC_193	193
+	study_countries	Serbia	SC_194	194
+	study_countries	Seychelles	SC_195	195
+	study_countries	Sierra Leone	SC_196	196
+	study_countries	Singapore	SC_197	197
+	study_countries	Slovakia	SC_198	198
+	study_countries	Slovenia	SC_199	199
+	study_countries	Solomon Islands	SC_200	200
+	study_countries	Somalia	SC_201	201
+	study_countries	South Africa	SC_202	202
+	study_countries	South Georgia And Sandwich Isl.	SC_203	203
+	study_countries	Spain	SC_204	204
+	study_countries	Sri Lanka	SC_205	205
+	study_countries	Sudan	SC_206	206
+	study_countries	Suriname	SC_207	207
+	study_countries	Svalbard And Jan Mayen	SC_208	208
+	study_countries	Swaziland	SC_209	209
+	study_countries	Sweden	SC_210	210
+	study_countries	Switzerland	SC_211	211
+	study_countries	Syrian Arab Republic	SC_212	212
+	study_countries	Taiwan	SC_213	213
+	study_countries	Tajikistan	SC_214	214
+	study_countries	Tanzania	SC_215	215
+	study_countries	Thailand	SC_216	216
+	study_countries	Timor-Leste	SC_217	217
+	study_countries	Togo	SC_218	218
+	study_countries	Tokelau	SC_219	219
+	study_countries	Tonga	SC_220	220
+	study_countries	Trinidad And Tobago	SC_221	221
+	study_countries	Tunisia	SC_222	222
+	study_countries	Turkey	SC_223	223
+	study_countries	Turkmenistan	SC_224	224
+	study_countries	Turks And Caicos Islands	SC_225	225
+	study_countries	Tuvalu	SC_226	226
+	study_countries	Uganda	SC_227	227
+	study_countries	Ukraine	SC_228	228
+	study_countries	United Arab Emirates	SC_229	229
+	study_countries	United Kingdom	SC_230	230
+	study_countries	United States	SC_231	231
+	study_countries	United States Outlying Islands	SC_232	232
+	study_countries	Uruguay	SC_233	233
+	study_countries	Uzbekistan	SC_234	234
+	study_countries	Vanuatu	SC_235	235
+	study_countries	Venezuela	SC_236	236
+	study_countries	Viet Nam	SC_237	237
+	study_countries	Virgin Islands, British	SC_238	238
+	study_countries	Virgin Islands, U.S.	SC_239	239
+	study_countries	Wallis And Futuna	SC_240	240
+	study_countries	Western Sahara	SC_241	241
+	study_countries	Yemen	SC_242	242
+	study_countries	Zambia	SC_243	243
+	study_countries	Zimbabwe	SC_244	244
+	study_centers	Monocentric	SC_1_0	0
+	study_centers	Multicentric	SC_1_1	1
+	study_subject	Animal	SS_1_0	0
+	study_subject	Other	SS_1_1	1
+	study_subject	Person	SS_1_2	2
+	study_subject	Unknown	SS_1_3	3
+	study_sampling_method	Mixed probability and non-probability	SSM_0	0
+	study_sampling_method	Non-probability	SSM_1	1
+	study_sampling_method	Not applicable	SSM_2	2
+	study_sampling_method	Other	SSM_3	3
+	study_sampling_method	Probability	SSM_4	4
+	study_sampling_method	Total universe/Complete enumeration	SSM_5	5
+	study_sampling_method	Unknown	SSM_6	6
+	study_sampling_method_probability	Cluster	SSMP_0	0
+	study_sampling_method_probability	Cluster: Simple random	SSMP_1	1
+	study_sampling_method_probability	Cluster: Stratified random	SSMP_2	2
+	study_sampling_method_probability	Multistage	SSMP_3	3
+	study_sampling_method_probability	Simple random	SSMP_4	4
+	study_sampling_method_probability	Stratified	SSMP_5	5
+	study_sampling_method_probability	Stratified: Disproportional	SSMP_6	6
+	study_sampling_method_probability	Stratified: Proportional	SSMP_7	7
+	study_sampling_method_probability	Systematic random	SSMP_8	8
+	study_sampling_method_non_probability	Availability	SSMNP_0	0
+	study_sampling_method_non_probability	Purposive	SSMNP_1	1
+	study_sampling_method_non_probability	Quota	SSMNP_2	2
+	study_sampling_method_non_probability	Respondent-assisted	SSMNP_3	3
+	study_data_sources_general	Administrative databases	SDSG_0	0
+	study_data_sources_general	Biological samples	SDSG_1	1
+	study_data_sources_general	Cognitive measurements	SDSG_2	2
+	study_data_sources_general	Genealogical records	SDSG_3	3
+	study_data_sources_general	Imaging data	SDSG_4	4
+	study_data_sources_general	Interview	SDSG_5	5
+	study_data_sources_general	Medical records	SDSG_6	6
+	study_data_sources_general	Omics technology	SDSG_7	7
+	study_data_sources_general	Other	SDSG_8	8
+	study_data_sources_general	Physiological/Biochemical measurements	SDSG_9	9
+	study_data_sources_general	Questionnaire	SDSG_10	10
+	study_data_sources_general	Registries	SDSG_11	11
+	study_data_sources_biosamples	Blood	SDSB_0	0
+	study_data_sources_biosamples	Buccal cells	SDSB_1	1
+	study_data_sources_biosamples	Cord blood	SDSB_2	2
+	study_data_sources_biosamples	DNA	SDSB_3	3
+	study_data_sources_biosamples	Faeces	SDSB_4	4
+	study_data_sources_biosamples	Hair	SDSB_5	5
+	study_data_sources_biosamples	Immortalized cell lines	SDSB_6	6
+	study_data_sources_biosamples	Isolated pathogen	SDSB_7	7
+	study_data_sources_biosamples	Nail	SDSB_8	8
+	study_data_sources_biosamples	Other biological samples	SDSB_9	9
+	study_data_sources_biosamples	Plasma	SDSB_10	10
+	study_data_sources_biosamples	RNA	SDSB_11	11
+	study_data_sources_biosamples	Saliva	SDSB_12	12
+	study_data_sources_biosamples	Serum	SDSB_13	13
+	study_data_sources_biosamples	Tissue (FFPE)	SDSB_14	14
+	study_data_sources_biosamples	Tissue (frozen)	SDSB_15	15
+	study_data_sources_biosamples	Urine	SDSB_16	16
+	study_data_sources_imaging	Computed tomography (CT)	SDSI_0	0
+	study_data_sources_imaging	Magnetic resonance imaging (MRI)	SDSI_1	1
+	study_data_sources_imaging	Other imaging data	SDSI_2	2
+	study_data_sources_imaging	Radiography (x-ray)	SDSI_3	3
+	study_data_sources_imaging	Ultrasound	SDSI_4	4
+	study_data_sources_omics	Biomarkers	SDSO_0	0
+	study_data_sources_omics	Genomics	SDSO_1	1
+	study_data_sources_omics	Metabolomics	SDSO_2	2
+	study_data_sources_omics	Other omics technology	SDSO_3	3
+	study_data_sources_omics	Proteomics	SDSO_4	4
+	study_data_sources_omics	Transcriptomics	SDSO_5	5
+	study_primary_purpose	Basic science/Physiological study	SPP_0	0
+	study_primary_purpose	Device feasibility	SPP_1	1
+	study_primary_purpose	Diagnostic	SPP_2	2
+	study_primary_purpose	Health economics	SPP_3	3
+	study_primary_purpose	Health services research	SPP_4	4
+	study_primary_purpose	Not applicable	SPP_5	5
+	study_primary_purpose	Other	SPP_6	6
+	study_primary_purpose	Pharmacogenetics	SPP_7	7
+	study_primary_purpose	Pharmacogenomics	SPP_8	8
+	study_primary_purpose	Prevention	SPP_9	9
+	study_primary_purpose	Prognostic	SPP_10	10
+	study_primary_purpose	Screening	SPP_11	11
+	study_primary_purpose	Supportive care	SPP_12	12
+	study_primary_purpose	Treatment	SPP_13	13
+	time_unit	Days	TU_0	0
+	time_unit	Hours	TU_1	1
+	time_unit	Minutes	TU_2	2
+	time_unit	Months	TU_3	3
+	time_unit	Weeks	TU_4	4
+	time_unit	Weeks of gestation	TU_5	5
+	time_unit	Years	TU_6	6
+	study_eligibility_age_max_time_unit	Days	SEAMTU_0	0
+	study_eligibility_age_max_time_unit	Hours	SEAMTU_1	1
+	study_eligibility_age_max_time_unit	Minutes	SEAMTU_2	2
+	study_eligibility_age_max_time_unit	Months	SEAMTU_3	3
+	study_eligibility_age_max_time_unit	Weeks	SEAMTU_4	4
+	study_eligibility_age_max_time_unit	Weeks of gestation	SEAMTU_5	5
+	study_eligibility_age_max_time_unit	Years	SEAMTU_6	6
+	study_eligibility_genders	Diverse	SEG_0	0
+	study_eligibility_genders	Female	SEG_1	1
+	study_eligibility_genders	Male	SEG_2	2
+	study_eligibility_genders	Not applicable	SEG_3	3
+	study_age_min_examined_time_unit	Days	SAMETU_0	0
+	study_age_min_examined_time_unit	Hours	SAMETU_1	1
+	study_age_min_examined_time_unit	Minutes	SAMETU_2	2
+	study_age_min_examined_time_unit	Months	SAMETU_3	3
+	study_age_min_examined_time_unit	Weeks	SAMETU_4	4
+	study_age_min_examined_time_unit	Weeks of gestation	SAMETU_5	5
+	study_age_min_examined_time_unit	Years	SAMETU_6	6
+	study_age_max_examined_time_unit	Days	SAMETU_1_0	0
+	study_age_max_examined_time_unit	Hours	SAMETU_1_1	1
+	study_age_max_examined_time_unit	Minutes	SAMETU_1_2	2
+	study_age_max_examined_time_unit	Months	SAMETU_1_3	3
+	study_age_max_examined_time_unit	Weeks	SAMETU_1_4	4
+	study_age_max_examined_time_unit	Weeks of gestation	SAMETU_1_5	5
+	study_age_max_examined_time_unit	Years	SAMETU_1_6	6
+	study_arm_group_type	Active comparator	SAGT_0	0
+	study_arm_group_type	Experimental	SAGT_1	1
+	study_arm_group_type	No intervention	SAGT_2	2
+	study_arm_group_type	Other	SAGT_3	3
+	study_arm_group_type	Placebo comparator	SAGT_4	4
+	study_arm_group_type	Sham comparator	SAGT_5	5
+	study_intervention_type	Behavioral (e.g., psychotherapy, lifestyle counseling)	SIT_0	0
+	study_intervention_type	Biological/Vaccine	SIT_1	1
+	study_intervention_type	Combination product (combining a drug and device, a biological product and device; a drug and biological product; or a drug, biological product, and device)	SIT_2	2
+	study_intervention_type	Device (including sham)	SIT_3	3
+	study_intervention_type	Diagnostic test (e.g., imaging, in-vitro)	SIT_4	4
+	study_intervention_type	Dietary supplement (e.g., vitamins, minerals)	SIT_5	5
+	study_intervention_type	Drug (including placebo)	SIT_6	6
+	study_intervention_type	Genetic (including gene transfer, stem cell and recombinant DNA)	SIT_7	7
+	study_intervention_type	Other	SIT_8	8
+	study_intervention_type	Procedure/Surgery	SIT_9	9
+	study_intervention_type	Radiation	SIT_10	10
+	study_outcome_type	Other	SOT_0	0
+	study_outcome_type	Primary	SOT_1	1
+	study_outcome_type	Secondary	SOT_2	2
+	study_data_sharing_plan_generally	No, there is no plan to make data available	SDSPG_0	0
+	study_data_sharing_plan_generally	Undecided, it is not yet known if data will be made available	SDSPG_1	1
+	study_data_sharing_plan_generally	Yes, there is a plan to make data available	SDSPG_2	2
+	study_data_sharing_plan_supporting_information	Analytic code	SDSPSI_0	0
+	study_data_sharing_plan_supporting_information	Case report form (template)	SDSPSI_1	1
+	study_data_sharing_plan_supporting_information	Clinical study report	SDSPSI_2	2
+	study_data_sharing_plan_supporting_information	Code book	SDSPSI_3	3
+	study_data_sharing_plan_supporting_information	Data dictionary	SDSPSI_4	4
+	study_data_sharing_plan_supporting_information	Informed consent form	SDSPSI_5	5
+	study_data_sharing_plan_supporting_information	Manual of operations (SOP)	SDSPSI_6	6
+	study_data_sharing_plan_supporting_information	Other	SDSPSI_7	7
+	study_data_sharing_plan_supporting_information	Protocol amendment	SDSPSI_8	8
+	study_data_sharing_plan_supporting_information	Questionnaire (template)	SDSPSI_9	9
+	study_data_sharing_plan_supporting_information	Statistical analysis plan	SDSPSI_10	10
+	study_data_sharing_plan_supporting_information	Study protocol	SDSPSI_11	11
+	study_data_sharing_plan_datashield	No	SDSPD_0	0
+	study_data_sharing_plan_datashield	Pending	SDSPD_1	1
+	study_data_sharing_plan_datashield	Yes	SDSPD_2	2
+	study_time_perspectives	Cross-sectional	STP_0	0
+	study_time_perspectives	Other	STP_1	1
+	study_time_perspectives	Prospective	STP_2	2
+	study_time_perspectives	Retrospective	STP_3	3
+	study_biospecimen_retention	None retained	SBR_0	0
+	study_biospecimen_retention	Samples with DNA	SBR_1	1
+	study_biospecimen_retention	Samples without DNA	SBR_2	2
+	study_phase	Early-phase-1	SP_0	0
+	study_phase	Not applicable	SP_1	1
+	study_phase	Other	SP_2	2
+	study_phase	Phase-1	SP_3	3
+	study_phase	Phase-1-phase-2	SP_4	4
+	study_phase	Phase-2	SP_5	5
+	study_phase	Phase-2-phase-3	SP_6	6
+	study_phase	Phase-2a	SP_7	7
+	study_phase	Phase-2b	SP_8	8
+	study_phase	Phase-3	SP_9	9
+	study_phase	Phase-3a	SP_10	10
+	study_phase	Phase-3b	SP_11	11
+	study_phase	Phase-4	SP_12	12
+	study_masking_general	No	SMG_0	0
+	study_masking_general	Yes	SMG_1	1
+	study_masking_roles	Care provider	SMR_0	0
+	study_masking_roles	Investigator	SMR_1	1
+	study_masking_roles	Outcomes assessor	SMR_2	2
+	study_masking_roles	Participant	SMR_3	3
+	study_allocation	Nonrandomized	SA_0	0
+	study_allocation	Not applicable (for single-arm trials)	SA_1	1
+	study_allocation	Randomized	SA_2	2
+	study_off_label_use	No	SOLU_0	0
+	study_off_label_use	Not applicable	SOLU_1	1
+	study_off_label_use	Yes	SOLU_2	2

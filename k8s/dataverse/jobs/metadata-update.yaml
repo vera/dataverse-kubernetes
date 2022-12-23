@@ -3,6 +3,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: metadata-update-dataverse-
+  namespace: dv-test
   labels:
     app.kubernetes.io/name: metadata-update
     app.kubernetes.io/version: "1.0"
@@ -18,8 +19,8 @@ spec:
     spec:
       containers:
         - name: metadata-update
-          image: iqss/dataverse-k8s
-          command: ['scripts/metadata-update.sh']
+          image: ghcr.io/nfdi4health/csh-deployment/dataverse
+          command: ['../scripts/metadata-update.sh']
           envFrom:
             - configMapRef:
                 name: dataverse
@@ -27,6 +28,8 @@ spec:
             - name: api-secret
               mountPath: "/secrets/api"
               readOnly: true
+      imagePullSecrets:
+        - name: gh-container-creds
       initContainers:
         - name: check-solr-ready
           image: giantswarm/tiny-tools

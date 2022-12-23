@@ -67,6 +67,9 @@ RUN cd ${HOME_DIR} && \
     ln -s ${HOME_DIR}/dvinstall/dataverse.war ${DEPLOY_DIR}/dataverse.war && \
     find . -iname "custom*.tsv" -delete
 
+# Copy across metadata blocks
+COPY --chown=payara:payara docker/dataverse-k8s/metadata/* ${METADATA_DIR}/
+
 # Copy across docker scripts
 COPY --chown=payara:payara docker/dataverse-k8s/bin/* docker/dataverse-k8s/payara/bin/*.sh ${SCRIPT_DIR}/
 RUN chmod +x ${SCRIPT_DIR}/*

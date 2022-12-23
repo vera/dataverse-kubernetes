@@ -1,0 +1,335 @@
+#metadataBlock	name	dataverseAlias	displayName	blockURI
+	MDS_V2_1_v2_general		MDS_V2_1_v2_general	
+#datasetField	name	title	description	watermark	fieldType	displayOrder	displayFormat	advancedSearchField	allowControlledVocabulary	allowmultiples	facetable	displayoncreate	required	parent	metadatablock_id	termURI
+	resource_identifier	ID of the [RESOURCE]	Unique identifier of the resource used for identification within the NFDI4Health.		text	0		TRUE	FALSE	FALSE	FALSE	FALSE	TRUE		MDS_V2_1_v2_general	
+	resource_classification	Classification of the resource within the predefined categories	Group of items providing Information about classification of the resource within the predefined categories.		none	1		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		MDS_V2_1_v2_general	
+	resource_type	Type of the resource	A term describing the resource. You can register a study, a study protocoll, a questionnaire, etc.		text	2		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_classification	MDS_V2_1_v2_general	
+	resource_type_general	A more general type of the resource	A more general term describing the resource which forms a pair with the property "Type of the resource" (e.g. "Questionnaire"/"Text") You can select "Text" for most of the study documents, e.g. for questionnaires, informed consent forms, case report forms, etc.		text	3		TRUE	TRUE	FALSE	TRUE	FALSE	TRUE	resource_classification	MDS_V2_1_v2_general	
+	resource_titles	Title(s)/name(s) of the [RESOURCE]	Group of items providing Information about title(s)/name(s) of the resource.		none	4		FALSE	FALSE	TRUE	FALSE	TRUE	TRUE		MDS_V2_1_v2_general	
+	text	Title/name	Scientific unabbreviated title or name of the resource. Please provide at least one title/name of the resource. If the original title is not in English, please also provide an English translation of the original title.		text	5		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	resource_titles	MDS_V2_1_v2_general	
+	resource_titles_language	Language of the title/name	Language of the title/name.		text	6		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_titles	MDS_V2_1_v2_general	
+	resource_acronyms	Acronym(s) of the [RESOURCE]	Group of items providing Information about acronym(s) of the resource.		none	7		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_general	
+	resource_acronyms_text	Acronym	If existing, acronym(s) of the resource. The property refers primarily to studies which often have an acronym. For other types of resources, a short title (preferably up to 5 words) can be provided, e.g. "NAKO-COVID Questionnaire".	NAKO	text	8		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	resource_acronyms	MDS_V2_1_v2_general	
+	resource_acronyms_language	Language of the acronym	Language of the acronym.		text	9		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_acronyms	MDS_V2_1_v2_general	
+	resource_description_english	English description of the [RESOURCE]	Group of items with an English description of the resource.		none	10		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		MDS_V2_1_v2_general	
+	resource_description_english_text	English description of the [RESOURCE]	A short plain text summary describing the resource in English. The provided information should be understandable by scientific audience.		text	11		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	resource_description_english	MDS_V2_1_v2_general	
+	resource_description_english_language	Language of the description	Language of the description text.		text	12		TRUE	TRUE	FALSE	TRUE	FALSE	TRUE	resource_description_english	MDS_V2_1_v2_general	
+	resource_descriptions_non_english	Additional description(s) of the [RESOURCE]	Group of items with description(s) of the resource written not in English.		none	13		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_general	
+	resource_descriptions_non_english_text	Description	Short plain text summary of the resource other than in English. Additional descriptions of the resource are optional. The provided information should be understandable by scientific audience.		text	14		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	resource_descriptions_non_english	MDS_V2_1_v2_general	
+	resource_descriptions_non_english_language	Language of the description	Language of the description text.		text	15		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_descriptions_non_english	MDS_V2_1_v2_general	
+	resource_keywords	Keyword(s) describing the [RESOURCE]	Group of items providing Information about keywords describing the resource.		none	16		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_general	
+	resource_keywords_label	Keyword	Keyword(s) describing the resource. Preferably, use terms from MeSH (https://meshb.nlm.nih.gov/search) or UMLS (https://uts.nlm.nih.gov/uts/umls/home).	SARS-CoV-2	text	17		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	resource_keywords	MDS_V2_1_v2_general	
+	resource_keywords_label_code	Code of the keyword	If known, the code of the keyword in a classification/vocabulary. If found, the code from the classification/vocabulary used.	http://id.nlm.nih.gov/mesh/D000086402	text	18		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	resource_keywords	MDS_V2_1_v2_general	
+	resource_languages	Language(s) of the [RESOURCE]	Language(s) in which a study/substudy is conducted, or a language in which a study document is composed. Select all that apply.		text	19		TRUE	TRUE	TRUE	TRUE	TRUE	FALSE		MDS_V2_1_v2_general	
+	resource_web_page	Web page of the [RESOURCE]	If existing, a link to the web page directly relevant to the resource.		text	20		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE		MDS_V2_1_v2_general	
+	resource_non_study_details	Detailed information about the [RESOURCE]	Group of items applicable only to the resources which are not a study/substudy.		none	21		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE		MDS_V2_1_v2_general	
+	resource_version	Version of the [RESOURCE]	If existing, the version number of the resource.		text	22		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	resource_non_study_details	MDS_V2_1_v2_general	
+	resource_format	Format of the [RESOURCE]	Technical format of the resource. E.g., XML, PDF, XLSX, etc.		text	23		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	resource_non_study_details	MDS_V2_1_v2_general	
+	resource_use_rights	Information about the rights to (re-)use the [RESOURCE]	Group of items providing Information about the rights to (re-)use the resource.		none	24		FALSE	FALSE	FALSE	FALSE	TRUE	FALSE	resource_non_study_details	MDS_V2_1_v2_general	
+	resource_use_rights_label	License	License defining the rights to (re-)use the resource. Select one value from the list. If “Other” is selected, an explanation of the (re-)use terms and conditions can be provided in the property “Additional information about use rights”.		text	25		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_use_rights	MDS_V2_1_v2_general	
+	resource_use_rights_confirmations	Important nformation about licensing, if a Creative Commons liesense is selected.	Group of items applicable if a Creative Commons liesense is selected.		none	26		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	resource_use_rights	MDS_V2_1_v2_general	
+	resource_use_rights_authors_confirmation_1	Do you confirm that the authors have authority to license the [RESOURCE]?	Confirmation that the authors have authority to license the resource.		text	27		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_use_rights_confirmations	MDS_V2_1_v2_general	
+	resource_use_rights_authors_confirmation_2	Do you confirm that the authors have read and understood the terms of the chosen license?	Confirmation that the authors have read and understand the terms of the chosen license.		text	28		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_use_rights_confirmations	MDS_V2_1_v2_general	
+	resource_use_rights_authors_confirmation_3	Do you confirm that the authors understand that Creative Commons (CC) licensing is irrevocable?	Confirmation that the authors understand that Creative Commons (CC) licensing is not revocable.		text	29		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_use_rights_confirmations	MDS_V2_1_v2_general	
+	resource_use_rights_support_by_licencing	Do you confirm that the authors allow NFDI4Health to license the document?	Confirmation that NFDI4Health is allowed to licence the document, i.e. to mark the resource with the licence information.		text	30		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	resource_use_rights_confirmations	MDS_V2_1_v2_general	
+	resource_use_rights_description	Additional information about use rights	Any additional descriptive information explaining terms and conditions to (re-)use the resource. If “Other” is selected in the property "License", the preferred license or terms and conditions for (re-)use can be specified here.		text	31		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	resource_use_rights	MDS_V2_1_v2_general	
+	roles	Role(s)	Group of items providing information about person(s), group(s) of persons or institution(s)/organisation(s) contributing to the resource.		none	32		FALSE	FALSE	TRUE	FALSE	TRUE	TRUE		MDS_V2_1_v2_general	
+	role_name_type	Type of the name	Personal or organisational/group type of the name. Personal or organisational/group name?		text	33		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	roles	MDS_V2_1_v2_general	
+	role_name_organisational_group	Details about the organisation/institution/group/etc.	Group of items providing information about group(s) of persons, institution(s) or organisation(s) contributing to the resource. Organisational name can be used to denote a research group or an institution.		none	34		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	roles	MDS_V2_1_v2_general	
+	type	Type of the role	Type of the role an organisation, institution or group fulllfils. For example, this can be a sponsor of the study or a group of authors of the document. Which role does the organisation/institution/group/etc. fulllfil? Select one value from the list.		text	35		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	role_name_organisational_group	MDS_V2_1_v2_general	
+	role_name_organisational_group_name	Name of the organisation/institution/group	Name of the organisation, institution or group.		text	36		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	role_name_organisational_group	MDS_V2_1_v2_general	
+	role_name_organisational_group_type_funding_id	Funding identifier	Identifier assigned by a funder to the resource. If available, you can enter a funding identifier		text	37		TRUE	FALSE	TRUE	FALSE	TRUE	FALSE	role_name_organisational_group	MDS_V2_1_v2_general	
+	role_name_personal	Details about the person	Group of items providing information about person(s) contributing to the resource.		none	38		FALSE	FALSE	FALSE	FALSE	FALSE	FALSE	roles	MDS_V2_1_v2_general	
+	role_name_personal_type	Type of the role	Type of the role a person fulllfils. For example, this can be a principal investigator of a study or an author of a document. Which role does the person fulllfil? Select one value from the list.		text	39		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	role_name_personal	MDS_V2_1_v2_general	
+	role_name_personal_given_name	Given name of the person	Given name of the person.		text	40		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	role_name_personal	MDS_V2_1_v2_general	
+	role_name_personal_family_name	Family name of the person	Family name of the person.		text	41		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	role_name_personal	MDS_V2_1_v2_general	
+	role_name_personal_title	Title of the person	Title of the person.		text	42		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	role_name_personal	MDS_V2_1_v2_general	
+	role_name_identifiers	Digital identifier(s) of the person	Group of items providing information about digital identifiers of the person.		none	43		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	role_name_personal	MDS_V2_1_v2_general	
+	role_name_identifiers_identifier	Identifier	Digital identifier of the person according to a definite scheme. Preferably, provide an ORCID (https://orcid.org/).	0000-0003-1379-7023	text	44		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	role_name_identifiers	MDS_V2_1_v2_general	
+	scheme	Which type of identifer is reported?	Type of the identifier scheme.	ORCID	text	45		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	role_name_identifiers	MDS_V2_1_v2_general	
+	role_email	Email address	Email address of the person, group of persons or institution/organisation.		text	46		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	roles	MDS_V2_1_v2_general	
+	role_phone	Phone number	Phone number of the person, group of persons or institution/organisation. Please, use the International ITU-T E.164-number structure for geographic areas, e.g. +49 (0)153 1112233.	+49 (0)153 1112233	text	47		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	roles	MDS_V2_1_v2_general	
+	role_affiliations	Further information about organisation(s) associated with the role	Group of items providing further information about the organisation(s) associated with the role.		none	48		FALSE	FALSE	TRUE	FALSE	FALSE	FALSE	roles	MDS_V2_1_v2_general	
+	role_affiliation_name	Name of the organisation	Name of the organisation associated with the role. If you are have already entered the name of the organistion in the property "Name of the organisation/institution/group", please repeat it here.		text	49		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	role_affiliations	MDS_V2_1_v2_general	
+	role_affiliation_address	Address of the organisation	Address of the organisation associated with the role.		text	50		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	role_affiliations	MDS_V2_1_v2_general	
+	role_affiliation_web_page	Web page of the organisation	Web page of the organisation associated with the role.		text	51		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	role_affiliations	MDS_V2_1_v2_general	
+	role_affiliation_identifiers	Digital identifier(s) of the organisation	Group of items providing information about identifiers of the organisation.		none	52		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE	role_affiliations	MDS_V2_1_v2_general	
+	role_affiliation_identifiers_identifier	Identifier	Digital identifier of the organisation according to a definite scheme. Preferably, provide an identifier from ROR (https://ror.org/search).	0259fwx54	text	53		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	role_affiliation_identifiers	MDS_V2_1_v2_general	
+	role_affiliation_identifiers_scheme	Identifier scheme	Type of the identifier scheme. Which type of identifer is reported?	ROR	text	54		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	role_affiliation_identifiers	MDS_V2_1_v2_general	
+	ids_alternative	Alternative identifiers	Group of items providing information about identifiers (IDs) assigned to the given resource by another registering systems, e.g. a register of clinical trials or a data repository. If the [RESOURCE] is registered in other systems (e.g. a register of clinical trials or a data repository), you can provide corresponding identifier(s) here.		none	55		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_general	
+	ids_alternative_type	Type of the register	Type/name of the system where the given resource is already registered.	DRKS	text	56		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	ids_alternative	MDS_V2_1_v2_general	
+	ids_alternative_identifier	Identifier	Identifier (ID) assigened to the given resource by another registering system, e.g. by a register of clinical trials or a data repository. E. g., DRKS00021273, NCT04327505, etc.		text	57		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	ids_alternative	MDS_V2_1_v2_general	
+	ids	Related publications, datasets, study documents, web pages, etc.	Group of items providing information about identifiers (IDs) of the resources related to the given resource, e.g. DOIs of publications, datasets, study documents or links to web pages. If existing, you can specify identifier(s) of any related resources, e.g. DOIs of publications, datasets, study documents, links to web pages, etc.		none	58		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_general	
+	ids_identifier	Identifier of the related resource	Identifier (ID) related to, or associated with, the resource being registered. These can be IDs of related publications, datasets, study documents, web pages, etc. a) Publications like journal articles usually have a DOI, e.g. 10.3238/arztebl.2020.0861. b) A link (URL) starting with "http(s)://" to a web page with any additional information can also be provided here.	10.4126/FRL01-006431467	text	59		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	ids	MDS_V2_1_v2_general	
+	ids_type	Type of the identifier	Type of the identifier of the related resource. Select one value from the list.	DOI	text	60		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	ids	MDS_V2_1_v2_general	
+	date	Date of ID assignment	Date when the identifier of the related resource was assigned.		date	61		TRUE	FALSE	FALSE	FALSE	TRUE	FALSE	ids	MDS_V2_1_v2_general	
+	relation_type	Relationship between this [RESOURCE] (A) and the related resource (B)?	Relationship between the resource being registered (A) and the related resource (B). Select one value from the list.	A is part of B	text	62		TRUE	TRUE	FALSE	TRUE	TRUE	TRUE	ids	MDS_V2_1_v2_general	
+	ids_resource_type_general	Type of the related resource	Type of the related resource, e.g. journal article, dataset, text, etc. Select one value from the list. For example,. a journal article, dataset, text, etc.	Text	text	63		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	ids	MDS_V2_1_v2_general	
+	ids_nfdi4health	Related (sub-)studies, study documents, etc. registered on this portal	Group of items providing information about related resources registered on this portal. Does the [RESOURCE] have any related resources registered on this portal?		none	64		FALSE	FALSE	TRUE	FALSE	TRUE	FALSE		MDS_V2_1_v2_general	
+	ids_nfdi4health_identifier	Identifier of the related resource	Identifier (ID) of the related resource assigned on this portal.	39	text	65		TRUE	FALSE	FALSE	FALSE	TRUE	TRUE	ids_nfdi4health	MDS_V2_1_v2_general	
+	ids_nfdi4health_relation_type	Relationship between this [RESOURCE] (A) and the related resource (B)?	Relationship between the resource being registered (A) and the related resource (B).		text	66		TRUE	TRUE	FALSE	TRUE	TRUE	FALSE	ids_nfdi4health	MDS_V2_1_v2_general	
+	provenance	Information about provenance aspects of the data entry	Group of items providing information about provenance aspects of the data entry on the portal		none	67		FALSE	FALSE	FALSE	FALSE	FALSE	TRUE		MDS_V2_1_v2_general	
+	data_source	Source of information about the [RESOURCE]	Source of information about the resource and the way it was uploaded/collected.		text	68		TRUE	TRUE	FALSE	TRUE	FALSE	TRUE	provenance	MDS_V2_1_v2_general	
+	verification_date	Verfication date	Date on which the responsible party last verified the information about the resource, even if no additional or updated information is being submitted.		date	69		TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	verification_date_user	User who last verified the [RESOURCE]	User who last verified the information about the resource.		text	70		TRUE	TRUE	FALSE	TRUE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	resource_first_submitted_date	Date when the [RESOURCE] was first submitted for publication	Date when the resource was first submitted for publication.		date	71		TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	resource_first_submitted_user	User who first submitted the [RESOURCE] for publication	User who first submitted the [RESOURCE] for publication.		text	72		TRUE	TRUE	FALSE	TRUE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	resource_first_posted_date	Date when the [RESOURCE] was first posted/published	Date when the resource was first posted/published.		date	73		TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	resource_first_posted_user	User who first posted/published the [RESOURCE]	User who first posted/published the resource.		text	74		TRUE	TRUE	FALSE	TRUE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	last_update_submitted_date	Date when the last update of the [RESOURCE] was submitted for publication	Date when the last update of the resource was submitted for publication.		date	75		TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	last_update_submitted_user	User who submitted the last update of the [RESOURCE]	User who submitted the last update of the resource.		text	76		TRUE	TRUE	FALSE	TRUE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	last_update_posted_date	Date when the last update of the [RESOURCE] was posted/published	Date when the last update of the resource was posted/published.		date	77		TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	last_update_posted_user	User who posted/published the last update	User who posted/published the last update.		text	78		TRUE	TRUE	FALSE	TRUE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+	provenance_resource_version	Version number of the resource within the portal/system	Version number of the resource within the portal/system.		text	79		TRUE	FALSE	FALSE	FALSE	FALSE	FALSE	provenance	MDS_V2_1_v2_general	
+#controlledVocabulary	DatasetField	Value	identifier	displayOrder
+	resource_type	Case report form	RT_0	0
+	resource_type	Code book	RT_1	1
+	resource_type	Data dictionary	RT_2	2
+	resource_type	Data management plan	RT_3	3
+	resource_type	Dataset	RT_4	4
+	resource_type	Discussion guide	RT_5	5
+	resource_type	Informed consent form	RT_6	6
+	resource_type	Interview scheme and themes	RT_7	7
+	resource_type	Manual of operations (SOPs)	RT_8	8
+	resource_type	Observation guide	RT_9	9
+	resource_type	Other	RT_10	10
+	resource_type	Other data collection instrument	RT_11	11
+	resource_type	Other study document	RT_12	12
+	resource_type	Participant tasks	RT_13	13
+	resource_type	Patient information sheet	RT_14	14
+	resource_type	Protocol amendment	RT_15	15
+	resource_type	Questionnaire	RT_16	16
+	resource_type	Statistical analysis plan	RT_17	17
+	resource_type	Study	RT_18	18
+	resource_type	Study protocol	RT_19	19
+	resource_type	Substudy/Data collection event	RT_20	20
+	resource_type_general	Audiovisual	RTG_0	0
+	resource_type_general	Book	RTG_1	1
+	resource_type_general	Book chapter	RTG_2	2
+	resource_type_general	Collection	RTG_3	3
+	resource_type_general	Computational notebook	RTG_4	4
+	resource_type_general	Conference paper	RTG_5	5
+	resource_type_general	Conference proceeding	RTG_6	6
+	resource_type_general	Data paper	RTG_7	7
+	resource_type_general	Dataset	RTG_8	8
+	resource_type_general	Dissertation	RTG_9	9
+	resource_type_general	Event	RTG_10	10
+	resource_type_general	Image	RTG_11	11
+	resource_type_general	Interactive resource	RTG_12	12
+	resource_type_general	Journal	RTG_13	13
+	resource_type_general	Journal article	RTG_14	14
+	resource_type_general	Model	RTG_15	15
+	resource_type_general	Other	RTG_16	16
+	resource_type_general	Output management plan	RTG_17	17
+	resource_type_general	Peer review	RTG_18	18
+	resource_type_general	Physical object	RTG_19	19
+	resource_type_general	Preprint	RTG_20	20
+	resource_type_general	Report	RTG_21	21
+	resource_type_general	Service	RTG_22	22
+	resource_type_general	Software	RTG_23	23
+	resource_type_general	Sound	RTG_24	24
+	resource_type_general	Standard	RTG_25	25
+	resource_type_general	Text	RTG_26	26
+	resource_type_general	Workflow	RTG_27	27
+	resource_titles_language	DE (German)	L_0	0
+	resource_titles_language	EN (English)	L_1	1
+	resource_titles_language	ES (Spanish)	L_2	2
+	resource_titles_language	FR (French)	L_3	3
+	resource_titles_language	Other	L_4	4
+	resource_acronyms_language	DE (German)	RAL_0	0
+	resource_acronyms_language	EN (English)	RAL_1	1
+	resource_acronyms_language	ES (Spanish)	RAL_2	2
+	resource_acronyms_language	FR (French)	RAL_3	3
+	resource_acronyms_language	Other	RAL_4	4
+	resource_description_english_language	EN (English)	RDEL_0	0
+	resource_descriptions_non_english_language	DE (German)	RDNEL_0	0
+	resource_descriptions_non_english_language	ES (Spanish)	RDNEL_1	1
+	resource_descriptions_non_english_language	FR (French)	RDNEL_2	2
+	resource_descriptions_non_english_language	Other	RDNEL_3	3
+	resource_languages	EN (English)	RL_0	0
+	resource_use_rights_label	All rights reserved	RURL_0	0
+	resource_use_rights_label	CC BY 4.0 (Creative Commons Attribution 4.0 International)	RURL_1	1
+	resource_use_rights_label	CC BY-NC 4.0 (Creative Commons Attribution Non Commercial 4.0 International)	RURL_2	2
+	resource_use_rights_label	CC BY-NC-SA 4.0 (Creative Commons Attribution Non Commercial Share Alike 4.0 International)	RURL_3	3
+	resource_use_rights_label	CC BY-SA 4.0 (Creative Commons Attribution Share Alike 4.0 International)	RURL_4	4
+	resource_use_rights_label	CC0 1.0 (Creative Commons Zero v1.0 Universal)	RURL_5	5
+	resource_use_rights_label	Not applicable	RURL_6	6
+	resource_use_rights_label	Other	RURL_7	7
+	resource_use_rights_authors_confirmation_1	No	RURAC1_0	0
+	resource_use_rights_authors_confirmation_1	Yes	RURAC1_1	1
+	resource_use_rights_authors_confirmation_2	No	RURAC2_0	0
+	resource_use_rights_authors_confirmation_2	Yes	RURAC2_1	1
+	resource_use_rights_authors_confirmation_3	No	RURAC3_0	0
+	resource_use_rights_authors_confirmation_3	Yes	RURAC3_1	1
+	resource_use_rights_support_by_licencing	No	RURSBL_0	0
+	resource_use_rights_support_by_licencing	Yes	RURSBL_1	1
+	role_name_type	Organisational	RNT_0	0
+	role_name_type	Personal	RNT_1	1
+	type	Contact	T_0	0
+	type	Creator/Author	T_1	1
+	type	Data collector	T_2	2
+	type	Data curator	T_3	3
+	type	Data manager	T_4	4
+	type	Distributor	T_5	5
+	type	Funder (private)	T_6	6
+	type	Funder (public)	T_7	7
+	type	Hosting institution	T_8	8
+	type	Other	T_9	9
+	type	Producer	T_10	10
+	type	Publisher	T_11	11
+	type	Registration agency	T_12	12
+	type	Registration authority	T_13	13
+	type	Research group	T_14	14
+	type	Rights holder	T_15	15
+	type	Sponsor (primary)	T_16	16
+	type	Sponsor (secondary)	T_17	17
+	type	Sponsor-Investigator	T_18	18
+	type	Supervisor	T_19	19
+	role_name_personal_type	Contact	RNPT_0	0
+	role_name_personal_type	Creator/Author	RNPT_1	1
+	role_name_personal_type	Data collector	RNPT_2	2
+	role_name_personal_type	Data curator	RNPT_3	3
+	role_name_personal_type	Data manager	RNPT_4	4
+	role_name_personal_type	Editor	RNPT_5	5
+	role_name_personal_type	Other	RNPT_6	6
+	role_name_personal_type	Principal investigator	RNPT_7	7
+	role_name_personal_type	Producer	RNPT_8	8
+	role_name_personal_type	Project leader	RNPT_9	9
+	role_name_personal_type	Project manager	RNPT_10	10
+	role_name_personal_type	Project member	RNPT_11	11
+	role_name_personal_type	Related person	RNPT_12	12
+	role_name_personal_type	Researcher	RNPT_13	13
+	role_name_personal_type	Rights holder	RNPT_14	14
+	role_name_personal_type	Sponsor (primary)	RNPT_15	15
+	role_name_personal_type	Sponsor (secondary)	RNPT_16	16
+	role_name_personal_type	Sponsor-Investigator	RNPT_17	17
+	role_name_personal_type	Supervisor	RNPT_18	18
+	role_name_personal_type	Work package leader	RNPT_19	19
+	role_name_personal_title	Dr.	RNPT_1_0	0
+	role_name_personal_title	Mr.	RNPT_1_1	1
+	role_name_personal_title	Ms.	RNPT_1_2	2
+	role_name_personal_title	Other	RNPT_1_3	3
+	role_name_personal_title	Prof. Dr.	RNPT_1_4	4
+	scheme	GRID	S_0	0
+	scheme	ISNI	S_1	1
+	scheme	ORCID	S_2	2
+	scheme	ROR	S_3	3
+	role_affiliation_identifiers_scheme	GRID	RAIS_0	0
+	role_affiliation_identifiers_scheme	ISNI	RAIS_1	1
+	role_affiliation_identifiers_scheme	ROR	RAIS_2	2
+	ids_alternative_type	DRKS	IAT_0	0
+	ids_alternative_type	EUDAMED	IAT_1	1
+	ids_alternative_type	EudraCT	IAT_2	2
+	ids_alternative_type	ISRCTN	IAT_3	3
+	ids_alternative_type	KonsortSWD	IAT_4	4
+	ids_alternative_type	MDM Portal	IAT_5	5
+	ids_alternative_type	NCT (ClinicalTrials.gov)	IAT_6	6
+	ids_alternative_type	Other	IAT_7	7
+	ids_alternative_type	UTN	IAT_8	8
+	ids_type	DOI	IT_0	0
+	ids_type	EAN13	IT_1	1
+	ids_type	EISSN	IT_2	2
+	ids_type	Handle	IT_3	3
+	ids_type	ISBN	IT_4	4
+	ids_type	ISSN	IT_5	5
+	ids_type	ISTC	IT_6	6
+	ids_type	LISSN	IT_7	7
+	ids_type	LSID	IT_8	8
+	ids_type	Other	IT_9	9
+	ids_type	PMID	IT_10	10
+	ids_type	PURL	IT_11	11
+	ids_type	URL	IT_12	12
+	ids_type	URN	IT_13	13
+	ids_type	arXiv	IT_14	14
+	ids_type	w3id	IT_15	15
+	relation_type	A cites B	RT_1_0	0
+	relation_type	A compiles B	RT_1_1	1
+	relation_type	A continues B	RT_1_2	2
+	relation_type	A describes B	RT_1_3	3
+	relation_type	A documents B	RT_1_4	4
+	relation_type	A has metadata B	RT_1_5	5
+	relation_type	A has part B	RT_1_6	6
+	relation_type	A has version B	RT_1_7	7
+	relation_type	A is cited by B	RT_1_8	8
+	relation_type	A is compiled by B	RT_1_9	9
+	relation_type	A is continued by B	RT_1_10	10
+	relation_type	A is derived from B	RT_1_11	11
+	relation_type	A is described by B	RT_1_12	12
+	relation_type	A is documented by B	RT_1_13	13
+	relation_type	A is identical to B	RT_1_14	14
+	relation_type	A is metadata for B	RT_1_15	15
+	relation_type	A is new version of B	RT_1_16	16
+	relation_type	A is obsoleted by B	RT_1_17	17
+	relation_type	A is original form of B	RT_1_18	18
+	relation_type	A is part of B	RT_1_19	19
+	relation_type	A is previous version of B	RT_1_20	20
+	relation_type	A is referenced by B	RT_1_21	21
+	relation_type	A is required by B	RT_1_22	22
+	relation_type	A is reviewed by B	RT_1_23	23
+	relation_type	A is source of B	RT_1_24	24
+	relation_type	A is supplement to B	RT_1_25	25
+	relation_type	A is supplemented by B	RT_1_26	26
+	relation_type	A is variant form of B	RT_1_27	27
+	relation_type	A is version of B	RT_1_28	28
+	relation_type	A obsoletes B	RT_1_29	29
+	relation_type	A references B	RT_1_30	30
+	relation_type	A requires B	RT_1_31	31
+	relation_type	A reviews B	RT_1_32	32
+	ids_resource_type_general	Audiovisual	IRTG_0	0
+	ids_resource_type_general	Book	IRTG_1	1
+	ids_resource_type_general	Book chapter	IRTG_2	2
+	ids_resource_type_general	Collection	IRTG_3	3
+	ids_resource_type_general	Computational notebook	IRTG_4	4
+	ids_resource_type_general	Conference paper	IRTG_5	5
+	ids_resource_type_general	Conference proceeding	IRTG_6	6
+	ids_resource_type_general	Data paper	IRTG_7	7
+	ids_resource_type_general	Dataset	IRTG_8	8
+	ids_resource_type_general	Dissertation	IRTG_9	9
+	ids_resource_type_general	Event	IRTG_10	10
+	ids_resource_type_general	Image	IRTG_11	11
+	ids_resource_type_general	Interactive resource	IRTG_12	12
+	ids_resource_type_general	Journal	IRTG_13	13
+	ids_resource_type_general	Journal article	IRTG_14	14
+	ids_resource_type_general	Model	IRTG_15	15
+	ids_resource_type_general	Other	IRTG_16	16
+	ids_resource_type_general	Output management plan	IRTG_17	17
+	ids_resource_type_general	Peer review	IRTG_18	18
+	ids_resource_type_general	Physical object	IRTG_19	19
+	ids_resource_type_general	Preprint	IRTG_20	20
+	ids_resource_type_general	Report	IRTG_21	21
+	ids_resource_type_general	Service	IRTG_22	22
+	ids_resource_type_general	Software	IRTG_23	23
+	ids_resource_type_general	Sound	IRTG_24	24
+	ids_resource_type_general	Standard	IRTG_25	25
+	ids_resource_type_general	Text	IRTG_26	26
+	ids_resource_type_general	Workflow	IRTG_27	27
+	ids_nfdi4health_relation_type	A continues B	INRT_0	0
+	ids_nfdi4health_relation_type	A describes B	INRT_1	1
+	ids_nfdi4health_relation_type	A has part B	INRT_2	2
+	ids_nfdi4health_relation_type	A has version B	INRT_3	3
+	ids_nfdi4health_relation_type	A is continued by B	INRT_4	4
+	ids_nfdi4health_relation_type	A is derived from B	INRT_5	5
+	ids_nfdi4health_relation_type	A is described by B	INRT_6	6
+	ids_nfdi4health_relation_type	A is identical to B	INRT_7	7
+	ids_nfdi4health_relation_type	A is new version of B	INRT_8	8
+	ids_nfdi4health_relation_type	A is obsoleted by B	INRT_9	9
+	ids_nfdi4health_relation_type	A is original form of B	INRT_10	10
+	ids_nfdi4health_relation_type	A is part of B	INRT_11	11
+	ids_nfdi4health_relation_type	A is previous version of B	INRT_12	12
+	ids_nfdi4health_relation_type	A is source of B	INRT_13	13
+	ids_nfdi4health_relation_type	A is supplement to B	INRT_14	14
+	ids_nfdi4health_relation_type	A is supplemented by B	INRT_15	15
+	ids_nfdi4health_relation_type	A is variant form of B	INRT_16	16
+	ids_nfdi4health_relation_type	A is version of B	INRT_17	17
+	ids_nfdi4health_relation_type	A obsoletes B	INRT_18	18
+	data_source	Automatically uploaded: ClinicalTrials.gov	DS_0	0
+	data_source	Automatically uploaded: DRKS	DS_1	1
+	data_source	Automatically uploaded: ICTRP	DS_2	2
+	data_source	Automatically uploaded: MDM Portal	DS_3	3
+	data_source	Automatically uploaded: Other	DS_4	4
+	data_source	Manually collected	DS_5	5
+	verification_date_user	Names from the list of users	VDU_0	0
+	resource_first_submitted_user	Names from the list of users	RFSU_0	0
+	resource_first_posted_user	Names from the list of users	RFPU_0	0
+	last_update_submitted_user	Names from the list of users	LUSU_0	0
+	last_update_posted_user	Names from the list of users	LUPU_0	0
