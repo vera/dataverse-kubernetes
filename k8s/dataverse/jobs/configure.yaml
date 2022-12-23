@@ -3,6 +3,7 @@ apiVersion: batch/v1
 kind: Job
 metadata:
   generateName: configure-dataverse-
+  namespace: dv-test
   labels:
     app.kubernetes.io/name: configure
     app.kubernetes.io/version: "1.1"
